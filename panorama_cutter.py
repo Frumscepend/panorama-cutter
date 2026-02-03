@@ -2,6 +2,9 @@ import sys
 from PIL import Image
 from pathlib import Path
 
+# Увеличиваем лимит пикселей для работы с большими панорамами
+Image.MAX_IMAGE_PIXELS = None
+
 # Получение пути к изображению
 if len(sys.argv) > 1:
     input_path = Path(sys.argv[1]).expanduser().resolve()
